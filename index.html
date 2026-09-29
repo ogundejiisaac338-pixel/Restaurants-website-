@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isaac | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+  <nav>
+    <h2>Isaac.</h2>
+
+    <button id="menuBtn" class="menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+
+    <ul id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button id="themeBtn">🌙 Darkmode</button></li>
+    </ul>
+  </nav>
+</header>
+
+  <section id="home" class="hero">
+    <img src="images\my profile picture.png" alt="Isaac">
+
+    <h1>Hello, I'm Isaac</h1>
+
+    <p>Web Designer & Front-End Developer</p>
+
+   <a href="#contact"><button> Hire Me</button></a> 
+</section>
+
+<section id="about" class="about">
+    <h2>About Me</h2>
+
+    <p>
+      I design beautiful, responsive and user-friendly websites for businesses and individuals.
+    </p>
+  
+</section>
+
+<section id="skills" class="skills">
+
+<h2>My Skills</h2>
+
+<div class="skill-box">
+  <h3>HTML</h3>
+</div>
+
+<div class="skill-box">
+  <h3>CSS</h3>
+</div>
+
+<div class="skill-box">
+  <h3>JavaScript</h3>
+</div>
+
+<div class="skill-box">
+  <h3>Figma</h3>
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="project">
+
+<h3>Law Firm Website</h3>
+
+<p>Professional legal website with contact page.</p>
+
+</div>
+
+<br>
+
+<div class="project">
+
+<h3>Real Estate Website</h3>
+
+<p>Responsive property listing website.</p>
+
+</div>
+
+<br>
+
+<div class="project">
+
+<h3>Tailor Website</h3>
+
+<p>Fashion business website with gallery.</p>
+
+</div>
+
+<br>
+
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <form id="contact-form">
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+
+    <p id="status"></p>
+  </form>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

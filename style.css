@@ -1,0 +1,228 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial;
+    background:#f5f5f5;
+    color:#333;
+}
+
+header{
+    background:#0f172a;
+    padding:20px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:#0f172a;
+}
+
+nav h2{
+    color:white;
+}
+
+#navLinks{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+#navLinks a{
+    color:white;
+    text-decoration:none;
+}
+
+/* Hamburger Button */
+.menu-btn{
+    width:40px;
+    height:40px;
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:6px;
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+
+.menu-btn span{
+    width:28px;
+    height:3px;
+    background:white;
+    border-radius:10px;
+    transition:0.3s ease;
+}
+
+/* Animate into X */
+.menu-btn.active span:nth-child(1){
+    transform:translateY(9px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2){
+    opacity:0;
+}
+
+.menu-btn.active span:nth-child(3){
+    transform:translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile only */
+@media (max-width:768px){
+
+    .menu-btn{
+        display:flex;
+    }
+
+    #navLinks{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#0f172a;
+        padding:20px 0;
+        text-align:center;
+    }
+
+    #navLinks.show{
+        display:flex;
+    }
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero img{
+    width:160px;
+    height: 160px;
+    border-radius:50%;
+    
+}
+
+.hero h1{
+    font-size:40px;
+    margin-top:20px;
+}
+
+.hero button{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+}
+
+section{
+    padding:60px 30px;
+}
+
+ .box{
+ background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.box p{
+    color:#111827;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+}
+
+.skill-box,
+.project{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input, textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+textarea{
+    height:120px;
+}
+
+form button{
+    background:#2563eb;
+    color:white;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+}
+
+#themeBtn{
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.dark #themeBtn{
+    background: #374151;
+    color: white;
+}
+
+/* Dark Mode */
+.dark{
+    background: #111827;
+    color: white;
+}
+
+/* Make paragraphs visible */
+.dark p,
+.dark h1,
+.dark h2,
+.dark h3,
+.dark a,
+.dark label{
+    color: white;
+}
+
+/* Keep cards readable */
+.dark .project,
+.dark .skill-box,
+.dark .about{
+    background: #1f2937;
+    color: white;
+}
+
+/* Form fields */
+.dark input,
+.dark textarea{
+    background: #374151;
+    color: white;
+    border: 1px solid #6b7280;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder{
+    color: #d1d5db;
+}
+
+
+
