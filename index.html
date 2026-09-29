@@ -1,129 +1,125 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Isaac | Portfolio</title>
+  <title>Tasty Bites Restaurant</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-  <header>
-  <nav>
-    <h2>Isaac.</h2>
+<header>
+  <nav class="navbar">
+    <h2 class="logo">Tasty Bites</h2>
 
-    <button id="menuBtn" class="menu-btn">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+    <div class="menu-btn" id="menuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-
-    <ul id="navLinks">
+    <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><button id="themeBtn">🌙 Darkmode</button></li>
+      <li><button id="themeToggle">🌙</button></li>
     </ul>
   </nav>
 </header>
 
-  <section id="home" class="hero">
-    <img src="images\my profile picture.png" alt="Isaac">
-
-    <h1>Hello, I'm Isaac</h1>
-
-    <p>Web Designer & Front-End Developer</p>
-
-   <a href="#contact"><button> Hire Me</button></a> 
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>Delicious Food, Delivered Fresh</h1>
+    <p>Experience premium dining with our handcrafted meals.</p>
+    <a href="#menu" class="btn">View Menu</a>
+  </div>
 </section>
 
-<section id="about" class="about">
-    <h2>About Me</h2>
+<section class="menu" id="menu">
+  <h2>Our Popular Dishes</h2>
 
-    <p>
-      I design beautiful, responsive and user-friendly websites for businesses and individuals.
-    </p>
-  
+  <div class="menu-grid">
+
+
+    <div class="filter-buttons">
+    <button onclick="filterMenu('all')">All</button>
+    <button onclick="filterMenu('burger')">Burger</button>
+    <button onclick="filterMenu('pizza')">Pizza</button>
+    <button onclick="filterMenu('drink')">Drinks</button>
+     <button onclick="filterMenu('steak')">Steak</button>
+    </div>
+
+<div class="card burger">
+   <div>
+      <img src="images\Burger image.jpg" alt="">
+      <h3>Classic Burger</h3>
+      <p>$15</p>
+    </div>
+</div>
+
+<div class="card pizza">
+   <div>
+      <img src="images\pizza image.jpg" alt="">
+      <h3>Pepperoni Pizza</h3>
+      <p>$18</p>
+    </div>
+</div>
+
+<div class="card drink">
+   <div>
+      <img src="images\drink image.jpg" alt="">
+      <h3>Drinks</h3>
+      <p>$10</p>
+    </div>
+</div>
+
+<div class="card steak">
+  <div>
+      <img src="images\steak image.jpg" alt="">
+      <h3>Grilled Steak</h3>
+      <p>$25</p>
+    </div>
+</div>
+    
+
+    
+
+    
+
+  </div>
 </section>
 
-<section id="skills" class="skills">
-
-<h2>My Skills</h2>
-
-<div class="skill-box">
-  <h3>HTML</h3>
-</div>
-
-<div class="skill-box">
-  <h3>CSS</h3>
-</div>
-
-<div class="skill-box">
-  <h3>JavaScript</h3>
-</div>
-
-<div class="skill-box">
-  <h3>Figma</h3>
-</div>
-
+<section class="about" id="about">
+  <h2>About Us</h2>
+  <p>
+    Tasty Bites serves fresh, locally sourced meals with exceptional taste.
+    Our chefs combine quality ingredients with passion to create unforgettable dishes.
+  </p>
 </section>
 
-<section id="projects">
+<section class="contact" id="contact">
+  <h2>Reserve a Table</h2>
 
-<h2>Projects</h2>
-
-<div class="project">
-
-<h3>Law Firm Website</h3>
-
-<p>Professional legal website with contact page.</p>
-
-</div>
-
-<br>
-
-<div class="project">
-
-<h3>Real Estate Website</h3>
-
-<p>Responsive property listing website.</p>
-
-</div>
-
-<br>
-
-<div class="project">
-
-<h3>Tailor Website</h3>
-
-<p>Fashion business website with gallery.</p>
-
-</div>
-
-<br>
-
-</section>
-
-<section id="contact">
-  <h2>Contact Me</h2>
-
-  <form id="contact-form">
-    <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-    <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-
-    <button type="submit">Send Message</button>
-
-    <p id="status"></p>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Book Now</button>
   </form>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="script.js"></script>
+<a href="https://wa.me/2348122290015"
+   class="whatsapp"
+   target="_blank">
+   💬
+</a>
+
+<footer>
+  <p>© 2026 Tasty Bites Restaurant. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>

@@ -1,47 +1,56 @@
-const themeBtn = document.getElementById("themeBtn");
-
-themeBtn.addEventListener("click", function () {
-    // Toggle dark mode
-    document.body.classList.toggle("dark");
-
-    // Change button text
-    if (document.body.classList.contains("dark")) {
-        themeBtn.textContent = "☀️ Whitemode";
-    } else {
-        themeBtn.textContent = "🌙 Darkmode";
-    }
-});
-
 
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
 menuBtn.addEventListener("click", () => {
-    menuBtn.classList.toggle("active"); // ☰ → X
-    navLinks.classList.toggle("show");  // Open menu
+    menuBtn.classList.toggle("active");
+    navLinks.classList.toggle("show");
 });
 
-// Initialize EmailJS
-emailjs.init("cjc6Hpl8sHLJEB-J7");
-
-const form = document.getElementById("contact-form");
-
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    emailjs.send("service_42yvsg6", "template_khy6tql", {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
-    })
-    .then(() => {
-        document.getElementById("status").innerHTML =
-            "Message sent successfully!";
-        form.reset();
-    })
-    .catch((error) => {
-        document.getElementById("status").innerHTML =
-            "Failed to send message.";
-        console.log(error);
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        menuBtn.classList.remove("active");
+        navLinks.classList.remove("show");
     });
 });
+
+const toggle = document.getElementById("themeToggle");
+
+toggle.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+
+    if(document.body.classList.contains("light")){
+        toggle.textContent = "☀️";
+    }else{
+        toggle.textContent = "🌙";
+    }
+});
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", ()=>{
+    header.classList.toggle("sticky", window.scrollY > 50);
+});
+
+/* filter */
+function filterMenu(category){
+
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card=>{
+
+        if(category === "all"){
+            card.style.display="block";
+        }
+
+        else if(card.classList.contains(category)){
+            card.style.display="block";
+        }
+
+        else{
+            card.style.display="none";
+        }
+
+    });
+
+}
